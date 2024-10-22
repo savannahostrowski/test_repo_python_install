@@ -19,13 +19,12 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
 
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python 3.11
       uses: actions/setup-python@v2
       with:
-          python-version: ${{ matrix.python-version }}
+        python-version: '3.12'
 
-
-    - name: Install Python 3.13
+    - name: Install Python ${{ matrix.python-version }}
       run: |
         brew update
-        brew install python@3.13
+        brew install python@${{ matrix.python-version }}
