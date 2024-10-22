@@ -25,8 +25,11 @@ jobs:
       with:
         python-version: '3.11'
 
+    - name: brew config
+        run: |
+            brew update
+            brew config
+
     - name: Install Python ${{ matrix.python-version }}
       run: |
-        brew update
         brew install python@${{ matrix.python-version }}
-        brew config
