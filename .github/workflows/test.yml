@@ -33,7 +33,3 @@ jobs:
     - name: Install Python ${{ matrix.python-version }}
       run: |
         brew install python@${{ matrix.python-version }}
-
-    - name: brew doctor
-      run: |
-        brew doctor
